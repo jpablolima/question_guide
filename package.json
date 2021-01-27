@@ -1,0 +1,27 @@
+{
+    "name": "question_guide",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "start": "nodemon index.js",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/jpablolima/question_guide.git"
+    },
+    "author": "João Pablo",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/jpablolima/question_guide/issues"
+    },
+    "homepage": "https://github.com/jpablolima/question_guide#readme",
+    "dependencies": {
+        "ejs": "^3.1.5",
+        "express": "^4.17.1"
+    },
+    "devDependencies": {
+        "nodemon": "^2.0.7"
+    }
+}
