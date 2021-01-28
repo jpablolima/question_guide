@@ -9,18 +9,16 @@ app.use(express.static('public'));
 
 
 app.get('/', (req, res) => {
+    res.render('index')
 
-    const name = req.params.name;
-    const lang = req.params.lang;
+});
 
-    res.render('index', {
-        name: name,
-        lang: lang,
-        age: 29
-    })
+app.get('/toask', (req, res) => {
+    res.render('toAsk')
 })
+
 
 
 app.listen(PORT, () => {
     console.log(`Server running in port ${PORT}`)
-})
+});
