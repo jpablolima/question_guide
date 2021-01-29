@@ -17,6 +17,12 @@ app.get('/toask', (req, res) => {
 })
 
 
+
+app.post('/savequestion', (req, res) => {
+    res.send('text ask')
+})
+
+
 app.listen(PORT, () => {
     console.log(`Server running in port ${PORT}`)
 });
