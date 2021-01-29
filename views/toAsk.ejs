@@ -5,31 +5,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Question Guide</title>
-    <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/style.css">
 </head>
 
 <body>
 
+    <nav class="navbar navbar-light bg-primary">
+        <a class="navbar-brand" href="/">
+            <img src="/img/asking.png" alt="">
+        </a>
+    </nav>
+
     <div class="container">
-        <h3>Ask question</h3>
-        <hr>
-        <form>
-            <label>Title</label>
-            <input type="text" placeholder="Title" class="form-control">
-            <label>Describe</label>
-            <textarea placeholder="Describe your question" class="form-control"></textarea>
-            <br>
-            <button class="btn btn-primary">Ask</button>
+        <div class="card" id="form-ask">
+            <div class="card-header">
+                <h3>Ask question</h3>
+            </div>
 
-        </form>
+            <div class="card-body">
+                <form>
+                    <label>Title</label>
+                    <input type="text" placeholder="Title" class="form-control">
+                    <label>Describe</label>
+                    <textarea placeholder="Describe your question" class="form-control"></textarea>
+                    <br>
+                    <button class="btn btn-primary">Ask</button>
+
+                </form>
+            </div>
+        </div>
     </div>
-
-
-
-
-
-
 
 
 

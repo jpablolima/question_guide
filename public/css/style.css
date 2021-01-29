@@ -1,0 +1,20 @@
+body {
+    background-color: #12355A;
+}
+
+.card-body {
+    background-color: #E9EDF1
+}
+
+h1,
+h3 {
+    color: #1A1B1F;
+}
+
+img {
+    height: 80px;
+}
+
+#form-ask {
+    margin-top: 5vh;
+}
