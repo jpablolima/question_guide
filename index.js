@@ -1,10 +1,15 @@
 const express = require('express');
 const app = express();
+const bodyParser = require('body-parser')
 
 const PORT = 3000;
 
 app.set('view engine', 'ejs');
 app.use(express.static('public'));
+app.use(bodyParser.urlencoded({ extended: false }))
+app.use(bodyParser.json())
+
+
 
 
 app.get('/', (req, res) => {
@@ -17,9 +22,11 @@ app.get('/toask', (req, res) => {
 })
 
 
-
 app.post('/savequestion', (req, res) => {
-    res.send('text ask')
+    var title = req.body.title;
+    var describe = req.body.describe;
+    res.send('form recebido' + title + 'decrição' + describe)
+
 })
 
 
