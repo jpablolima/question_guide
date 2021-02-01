@@ -23,9 +23,9 @@ app.get('/toask', (req, res) => {
 
 
 app.post('/savequestion', (req, res) => {
-    var title = req.body.title;
-    var describe = req.body.describe;
-    res.send('form recebido' + title + 'decrição' + describe)
+    const title = req.body.title;
+    const describe = req.body.describe;
+    res.send('form recebido')
 
 })
 
