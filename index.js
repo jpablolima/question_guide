@@ -22,8 +22,11 @@ app.use(bodyParser.json())
 
 
 app.get('/', (req, res) => {
-    res.render('index')
-
+    Question.findAll({ raw: true }).then(question => {
+        res.render('index', {
+            question: question
+        });
+    });
 });
 
 app.get('/toask', (req, res) => {
