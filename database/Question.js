@@ -17,4 +17,6 @@ Question.sync({ force: false }).then(() => {
     console.log("table successfully created")
 }).catch((err) => {
     console.log('error creating table', err)
-})
+});
+
+module.exports = Question;

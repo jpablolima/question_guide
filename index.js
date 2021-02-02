@@ -2,7 +2,7 @@ const express = require('express');
 const app = express();
 const bodyParser = require('body-parser');
 const connection = require('./database/database');
-const questionModel = require('./database/Question');
+const Question = require('./database/Question');
 
 const PORT = 3000;
 
@@ -21,8 +21,6 @@ app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
 
 
-
-
 app.get('/', (req, res) => {
     res.render('index')
 
@@ -36,7 +34,15 @@ app.get('/toask', (req, res) => {
 app.post('/savequestion', (req, res) => {
     const title = req.body.title;
     const describe = req.body.describe;
-    res.send('form recebido')
+
+    Question.create({
+        title: title,
+        description: describe
+    }).then(() => {
+        res.redirect('/');
+    }).catch((err) => {
+        console.log(err)
+    })
 
 })
 
