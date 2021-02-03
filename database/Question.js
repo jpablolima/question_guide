@@ -14,7 +14,7 @@ const Question = connection.define('question', {
 });
 
 Question.sync({ force: false }).then(() => {
-    console.log("table successfully created")
+    console.log("table successfully created " + Question)
 }).catch((err) => {
     console.log('error creating table', err)
 });

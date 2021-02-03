@@ -3,6 +3,7 @@ const app = express();
 const bodyParser = require('body-parser');
 const connection = require('./database/database');
 const Question = require('./database/Question');
+const Reply = require('./database/Reply');
 
 const PORT = 3000;
 
