@@ -50,9 +50,24 @@ app.post('/savequestion', (req, res) => {
         res.redirect('/');
     }).catch((err) => {
         console.log(err)
-    })
+    });
+});
 
-})
+
+app.get('/reply/:id', (req, res) => {
+    const id = req.params.id;
+    Question.findOne({
+        where: { id: id }
+    }).then(question => {
+        if (question != undefined) {
+            res.render('reply', {
+                question: question
+            })
+        } else {
+            res.redirect('/')
+        }
+    });
+});
 
 
 app.listen(PORT, () => {
