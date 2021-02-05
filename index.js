@@ -5,6 +5,7 @@ const connection = require('./database/database');
 const Question = require('./database/Question');
 const Reply = require('./database/Reply');
 
+
 const PORT = 3000;
 
 connection
@@ -70,6 +71,20 @@ app.get('/reply/:id', (req, res) => {
     });
 });
 
+
+app.post('/answers', (req, res) => {
+    var body = req.body.body;
+    var questionId = req.body.question;
+
+    Reply.create({
+        body: body,
+        questionId: questionId
+    }).then(() => {
+        res.redirect('/reply/' + questionId)
+    })
+
+
+});
 
 app.listen(PORT, () => {
     console.log(`Server running in port ${PORT}`)
